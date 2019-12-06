@@ -1,0 +1,12 @@
+<div class="menu">
+    <mat-list class="channels">
+        <mat-list-item *ngFor="let chat of chats" [(ngModel)]="currentChat" (click)="goTo()">
+            <p>{{chat.text}}</p>
+        </mat-list-item>
+    </mat-list>
+<div class="chatbox">
+    <mat-form-field>
+        <input matInput placeholder="Envoyer message" name="text" [(ngModel)]="text">
+        <mat-icon matSuffix (click)="addMsg(text)">Envoyer</mat-icon>
+    </mat-form-field>
+</div>  
